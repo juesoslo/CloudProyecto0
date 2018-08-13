@@ -1,2 +1,2 @@
-# CloudProyecto0
-Administración de eventos 
+# Administración de eventos  (Proyecto 0)
+Superusuario: Admin - Julian123
