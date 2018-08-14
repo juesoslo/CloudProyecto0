@@ -1,0 +1,83 @@
+header{
+    display: block;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+header .title{
+    color: #FFF;
+    line-height: 120px;
+    margin: 0 50px;
+    text-shadow: 3px 3px #000;
+}
+
+header nav{
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+header nav > a{
+    display: inline-block;
+    height: 50px;
+}
+
+header .login-wrapper{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+.pagination li {
+  display:inline-block;
+  padding:5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.pagination li:hover{
+    background: #449D44;
+}
+
+.pagination li:hover a, .pagination li:hover a:visited{
+    color: #FFF;
+}
+
+.pagination li a, .pagination li a:visited{
+    color: #000;
+}
+
+.pagination{
+    display: block;
+    text-align: center;
+}
+
+.navigation{
+    background: #EEE;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation > a{
+    line-height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 20px;
+    color: #000;
+}
+
+.navigation > a:hover{
+    background: #449D44;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.navigation > a:visited{
+    text-decoration: none;
+    color: #000;
+}

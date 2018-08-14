@@ -1,4 +1,4 @@
-"""eventos URL Configuration
+"""bosques_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -14,12 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
-
-admin.autodiscover()
+from . import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('index.urls')),
-    url(r'^registro/', include('registro.urls')),
+	url(r'^$', views.register_user, name = "addUsuario"),
+	url(r'^update', views.update_usuario, name = "updateUsuario"),
 ]

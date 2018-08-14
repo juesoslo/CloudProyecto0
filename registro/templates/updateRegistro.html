@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+    <form class="form" action="/registro/update" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-secondary" type="submit" value="Registrarse">
+    </form>
+{% endblock %}
