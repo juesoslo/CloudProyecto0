@@ -9,7 +9,6 @@ from django.contrib.auth.decorators import login_required
 
 def register_user(request):
 	if request.method == 'POST':
-		mensaje = ""
 		formUser = RegisterForm(request.POST)
 		formUsuario = RegisterUsuario(request.POST, request.FILES)
 		if formUser.is_valid() and formUsuario.is_valid():

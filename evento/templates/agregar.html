@@ -3,8 +3,10 @@
 
 {% block content %}
     <form action="/evento/add" enctype="multipart/form-data" method="post">
+    	<h2 class="display-4 text-center">Agregar eventos</h2>
         {% csrf_token %}
         {{ formEvento.as_p }}
         <input type="submit" value="Registrar">
+        <input type="submit" name="cancel" value="Cancelar" onClick="window.location='/';" />
     </form>
 {% endblock %}

@@ -21,10 +21,10 @@ def register_evento(request):
 			
 			return HttpResponseRedirect('/evento')
 		else:
-			render(request, 'registro.html', {'formEvento' :formEvento})
+			render(request, 'agregar.html', {'formEvento' :formEvento})
 	else:
 		formEvento = RegisterEvento()
-	return render(request, 'registro.html', {'formEvento' :formEvento})
+	return render(request, 'agregar.html', {'formEvento' :formEvento})
 
 
 @login_required
