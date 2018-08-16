@@ -42,7 +42,7 @@ class Evento(models.Model):
 	fecha_inicio	= models.DateTimeField(null=True,default=datetime.now(), blank=True )
 	fecha_final		= models.DateTimeField(null=True,default=datetime.now(), blank=True )
 	presencial		= models.BooleanField(default=True)
-	usuario			= models.ForeignKey(Usuario, null=True)
+	usuario			= models.ForeignKey(Usuario, on_delete=models.PROTECT, null=True)
 	fecha_registro	= models.DateTimeField(null=True,default=datetime.now(), blank=True )
 
 	class Meta:
