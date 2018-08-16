@@ -3,7 +3,7 @@
 
 {% block content %}
     <form action="/evento/update/{{ id }}/" enctype="multipart/form-data" method="post">
-        <h2 class="display-4 text-center">Editar eventos</h2>
+        <h2 class="display-4 text-center">Editar un evento</h2>
         {% csrf_token %}
         {{ formEvento.as_p }}
         <input type="submit" value="Actualizar">

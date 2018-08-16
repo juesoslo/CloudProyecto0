@@ -3,7 +3,7 @@
 
 {% block content %}
     <form action="" enctype="multipart/form-data" method="post">
-    	<h2 class="display-4 text-center">Agregar eventos</h2>
+    	<h2 class="display-4 text-center">Detalle del evento</h2>
         {% csrf_token %}
 		{% for field in formEvento %}
 		    <div class="fieldWrapper">
