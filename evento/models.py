@@ -20,7 +20,7 @@ class Categoria(models.Model):
 
 class Usuario(models.Model):
 	#user = models.OneToOneField(User)
-	user = models.ForeignKey(User, unique=True, null=True)
+	user = models.ForeignKey(User, on_delete=models.PROTECT, unique=True, null=True)
 	nombre = models.CharField(max_length=100, default="")
 	apellido = models.CharField(max_length=100, default="")
 
@@ -36,7 +36,7 @@ class Usuario(models.Model):
 
 class Evento(models.Model):
 	nombre			= models.CharField(max_length=100)
-	categoria		= models.ForeignKey(Categoria)
+	categoria		= models.ForeignKey(Categoria, on_delete=models.PROTECT)
 	lugar			= models.CharField(max_length=100)
 	direccion		= models.CharField(max_length=100)
 	fecha_inicio	= models.DateTimeField(null=True,default=datetime.now(), blank=True )
