@@ -11,6 +11,8 @@
 	{% for evento in lista_eventos %}
 	<li>
 		<strong>{{evento.nombre}}</strong>
+		- <a href="/evento/update/{{evento.id}}/"><i>Editar</i></a>
+		- <a href="/evento/delete/{{evento.id}}/"><i>Borrar</i></a>
 	</li>
 	{% endfor %}
 
