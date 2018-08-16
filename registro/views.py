@@ -22,6 +22,7 @@ def register_user(request):
 			return HttpResponseRedirect('/accounts/login')
 		else:
 			render(request, 'registro.html', {'formUser' :formUser, 'formUsuario': formUsuario})
+			
 	else:
 		formUser = RegisterForm()
 		formUsuario = RegisterUsuario()
