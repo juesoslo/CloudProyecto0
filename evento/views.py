@@ -3,7 +3,7 @@ from django import forms
 from django.http import HttpResponse, HttpResponseRedirect
 from evento.models import Evento, Usuario
 from django.contrib.auth.models import User
-from evento.forms import RegisterEvento, UpdateEvento
+from evento.forms import RegisterEvento, UpdateEvento, ListEvento, DetailsEvento
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
@@ -56,3 +56,10 @@ def list_evento(request):
 def delete_evento(request, id):
 	evento = Evento.objects.filter(id=id).delete()
 	return HttpResponseRedirect('/evento')
+
+
+@login_required
+def details_evento(request, id):
+	evento = get_object_or_404(Evento, id=id)
+	formEvento = DetailsEvento(request.POST or None, instance=evento)
+	return render(request, 'details.html', {'formEvento' :formEvento})

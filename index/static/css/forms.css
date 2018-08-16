@@ -32,6 +32,31 @@ form input[type='submit']{
     transition: all .2s ease-in-out;
 }
 
+form input[type='button']{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    margin: 15px auto;
+
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 form label{
     font-weight: bold;
     text-align: right;

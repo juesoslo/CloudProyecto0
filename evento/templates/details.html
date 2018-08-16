@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+    <form action="" enctype="multipart/form-data" method="post">
+    	<h2 class="display-4 text-center">Agregar eventos</h2>
+        {% csrf_token %}
+		{% for field in formEvento %}
+		    <div class="fieldWrapper">
+		        {{ field.errors }}
+		        {{ field.label_tag }} {{ field.value }}
+		        {% if field.help_text %}
+		        <p class="help">{{ field.help_text|safe }}</p>
+		        {% endif %}
+		    </div>
+		{% endfor %}
+
+		<input type="button" name="cancel" value="Cancelar" onClick="window.location='/';" />
+    </form>
+{% endblock %}

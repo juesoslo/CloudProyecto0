@@ -21,3 +21,9 @@ class ListEvento(ModelForm):
         model = Evento
         fields = ('nombre', 'categoria', 'lugar', 'direccion', 'fecha_inicio', 'fecha_final', 'presencial', 'usuario', 'fecha_registro')
         exclude = ('usuario','fecha_registro',)
+
+class DetailsEvento(ModelForm):
+    class Meta:
+        model = Evento
+        fields = ('nombre', 'categoria', 'lugar', 'direccion', 'fecha_inicio', 'fecha_final', 'presencial', 'usuario', 'fecha_registro')
+        exclude = ('usuario','fecha_registro',)

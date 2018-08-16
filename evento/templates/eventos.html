@@ -10,7 +10,7 @@
 	</ul>
 	{% for evento in lista_eventos %}
 	<li>
-		<strong>{{evento.nombre}}</strong>
+		<strong><b><a href="/evento/details/{{evento.id}}/">{{evento.nombre}}</a></b></strong>
 		- <a href="/evento/update/{{evento.id}}/"><i>Editar</i></a>
 		- <a href="/evento/delete/{{evento.id}}/"><i>Borrar</i></a>
 	</li>
