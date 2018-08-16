@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <form action="/registro/" enctype="multipart/form-data" method="post">
+    <form action="/registro" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ formUser.as_p }}
         {{ formUsuario.as_p }}

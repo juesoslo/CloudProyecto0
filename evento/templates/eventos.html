@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+<div class="especies-view container" id="eventosList">
+	<h2 class="display-4 text-center">Eventos</h2>
+    <b><a href="/evento/add">Agregar un evento</a></b>
+	<ul class="row list" id="especiesListWrapper">
+
+	</ul>
+	{% for evento in lista_eventos %}
+	<li>
+		<strong>{{evento.nombre}}</strong>
+	</li>
+	{% endfor %}
+
+	<ul class="pagination"></ul>
+</div>
+
+{% endblock %}

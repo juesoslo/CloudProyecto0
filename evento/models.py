@@ -19,7 +19,8 @@ class Categoria(models.Model):
 		return self.nombre
 
 class Usuario(models.Model):
-	user = models.OneToOneField(User)
+	#user = models.OneToOneField(User)
+	user = models.ForeignKey(User, unique=True, null=True)
 	nombre = models.CharField(max_length=100, default="")
 	apellido = models.CharField(max_length=100, default="")
 
@@ -38,10 +39,11 @@ class Evento(models.Model):
 	categoria		= models.ForeignKey(Categoria)
 	lugar			= models.CharField(max_length=100)
 	direccion		= models.CharField(max_length=100)
-	fecha_inicio	= models.DateTimeField(  null=True,default=datetime.now(), blank=True )
-	fecha_final		= models.DateTimeField(  null=True,default=datetime.now(), blank=True )
+	fecha_inicio	= models.DateTimeField(null=True,default=datetime.now(), blank=True )
+	fecha_final		= models.DateTimeField(null=True,default=datetime.now(), blank=True )
 	presencial		= models.BooleanField(default=True)
-	usuario			= models.ForeignKey(Usuario)
+	usuario			= models.ForeignKey(Usuario, null=True)
+	fecha_registro	= models.DateTimeField(null=True,default=datetime.now(), blank=True )
 
 	class Meta:
 		verbose_name = 'Evento'

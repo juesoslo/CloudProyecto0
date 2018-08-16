@@ -18,4 +18,5 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.home, name = "home"),
+	url(r'^accounts/profile', views.eventos, name = "eventos"),
 ]

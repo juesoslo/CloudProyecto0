@@ -18,5 +18,4 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.register_user, name = "addUsuario"),
-	url(r'^update', views.update_usuario, name = "updateUsuario"),
 ]

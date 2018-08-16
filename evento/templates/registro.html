@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+    <form action="/evento/add" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{ formEvento.as_p }}
+        <input type="submit" value="Registrar">
+    </form>
+{% endblock %}
